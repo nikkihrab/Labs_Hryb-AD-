@@ -48,7 +48,7 @@ noise_g = None
 t = np.linspace(0, 10, 1000)
 sampling_frequency = 1 / (t[1] - t[0])
 
-# Збільшене вікно графіка (вдвічі ширше)
+# Збільшене вікно графіка (вдвічі ширше), бо кнопки не читабельні були без цього
 fig, ax = plt.subplots(figsize=(16, 6))
 fig.set_facecolor('lavenderblush')
 ax.grid()
@@ -151,6 +151,3 @@ button_regenerate_noise.on_clicked(regenerate_noise)
 button_reset.on_clicked(reset)
 
 plt.show()
-
-# Не дозволяємо вікну миттєво закриватися (допомагає в GitHub Codespaces)
-input("Press Enter to exit...")
